@@ -1,7 +1,11 @@
+import { useReducer } from 'react';
+
 export default function useFetchJobs(params, page) {
+  const [state, dispatch] = useReducer({ jobs: [], loading: true });
+
   return {
-    jobs: ['test1', 'test2', 'test3'],
-    loading: true,
+    jobs: [],
+    loading: false,
     error: false,
   };
 }
