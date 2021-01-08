@@ -33,6 +33,9 @@ export default function useFetchJobs(params, page) {
       })
       .then((res) => {
         dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } });
+      })
+      .catch((error) => {
+        dispatch({ type: ACTIONS.ERROR, payload: { error: error } });
       });
   }, [params, page]);
 
