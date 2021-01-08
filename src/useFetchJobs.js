@@ -1,4 +1,5 @@
 import { useReducer, useEffect } from 'react';
+import axios from 'axios';
 
 const ACTIONS = {
   MAKE_REQUEST: 'make-request',
@@ -24,6 +25,7 @@ export default function useFetchJobs(params, page) {
 
   useEffect(() => {
     dispatch({ type: ACTIONS.MAKE_REQUEST });
+    axios.get('https://jobs.github.com/positions.json');
   }, [params, page]);
 
   return {
