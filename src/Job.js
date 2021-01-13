@@ -10,6 +10,7 @@ export default function Job({ job }) {
             <Card.Title>
               {job.title} - <span className='text-muted font-weight-light'>{job.company}</span>
             </Card.Title>
+            <Card.Subtitle>{new Date(job.created_at).toLocaleDateString()}</Card.Subtitle>
           </div>
         </div>
       </Card.Body>
