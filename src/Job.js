@@ -16,6 +16,9 @@ export default function Job({ job }) {
               {job.type}
             </Badge>
             <Badge variant='secondary'>{job.location}</Badge>
+            <div style={{ wordBreak: 'break-all' }}>
+              <ReactMarkdown source={job.how_to_apply} />
+            </div>
           </div>
         </div>
       </Card.Body>
