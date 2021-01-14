@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Badge } from 'react-bootstrap';
+import { Card, Badge, Button } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 
 export default function Job({ job }) {
@@ -22,6 +22,9 @@ export default function Job({ job }) {
           </div>
           <img className='d-none d-md-block' height='50' src={job.company_logo} alt={job.company} />
         </div>
+        <Card.Text>
+          <Button variant='primary'>View Details</Button>
+        </Card.Text>
       </Card.Body>
     </Card>
   );
