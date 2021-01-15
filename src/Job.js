@@ -26,7 +26,7 @@ export default function Job({ job }) {
         </div>
         <Card.Text>
           <Button onClick={() => setOpen((prevOpen) => !prevOpen)} variant='primary'>
-            View Details
+            {open ? 'Hide Details' : 'Open Details'}
           </Button>
         </Card.Text>
         <Collapse in={open}>
