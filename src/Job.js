@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Badge, Button } from 'react-bootstrap';
+import { Card, Badge, Button, Collapse } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 
 export default function Job({ job }) {
@@ -25,9 +25,11 @@ export default function Job({ job }) {
         <Card.Text>
           <Button variant='primary'>View Details</Button>
         </Card.Text>
-        <div className='mt-4'>
-          <ReactMarkdown source={job.description} />
-        </div>
+        <Collapse>
+          <div className='mt-4'>
+            <ReactMarkdown source={job.description} />
+          </div>
+        </Collapse>
       </Card.Body>
     </Card>
   );
