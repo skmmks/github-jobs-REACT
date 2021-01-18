@@ -6,6 +6,10 @@ export default function JobsPagination({ page, setPage }) {
     <div>
       <Pagination>
         <Pagination.Prev />
+        <Pagination.Item>{page - 1}</Pagination.Item>
+        <Pagination.Item>{page}</Pagination.Item>
+        <Pagination.Item>{page + 1}</Pagination.Item>
+        <Pagination.Next />
       </Pagination>
     </div>
   );
