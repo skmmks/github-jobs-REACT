@@ -30,13 +30,13 @@ export default function useFetchJobs(params, page) {
 
   useEffect(() => {
     const cancelToken1 = axios.CancelToken.source();
-    const cancelToken2 = axios.CancelToken.source(); 
+    const cancelToken2 = axios.CancelToken.source();
 
     dispatch({ type: ACTIONS.MAKE_REQUEST });
 
     axios
       .get(BASE_URL, {
-        cancelToken = cancelToken1.token,
+        cancelToken: cancelToken1.token,
         params: { markdown: true, page: page, ...params },
       })
       .then((res) => {
@@ -49,7 +49,7 @@ export default function useFetchJobs(params, page) {
 
     axios
       .get(BASE_URL, {
-        cancelToken = cancelToken2.token,
+        cancelToken: cancelToken2.token,
         params: { markdown: true, page: page + 1, ...params },
       })
       .then((res) => {
