@@ -44,6 +44,17 @@ export default function useFetchJobs(params, page) {
         dispatch({ type: ACTIONS.ERROR, payload: { error: error } });
       });
 
+    axios
+      .get(BASE_URL, {
+        params: { markdown: true, page: page + 1, ...params },
+      })
+      .then((res) => {
+        dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } });
+      })
+      .catch((error) => {
+        if (axios.isCancel(error)) return;
+        dispatch({ type: ACTIONS.ERROR, payload: { error: error } });
+      });
     return () => {
       cancelToken.cancel();
     };
