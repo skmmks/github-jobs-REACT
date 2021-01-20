@@ -9,6 +9,12 @@ function App() {
   const [page, setPage] = useState(1);
   const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page);
 
+  function handleParamChange(e) {
+    const param = e.target.name;
+    const value = e.target.value;
+    setPage(1);
+  }
+
   return (
     <Container className='my-4'>
       <h1 className='mb-4'>Github Jobs</h1>
