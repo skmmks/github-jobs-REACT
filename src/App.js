@@ -3,6 +3,7 @@ import useFetchJobs from './useFetchJobs';
 import { Container } from 'react-bootstrap';
 import Job from './Job';
 import JobsPagination from './JobsPagination';
+import SearchForm from './SearchForm';
 
 function App() {
   const [params, setParams] = useState({});
@@ -13,6 +14,9 @@ function App() {
     const param = e.target.name;
     const value = e.target.value;
     setPage(1);
+    setParams((prevParams) => {
+      return { ...prevParams, [param]: value };
+    });
   }
 
   return (
