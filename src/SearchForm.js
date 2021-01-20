@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function SearchForm() {
-  return <div></div>;
+export default function SearchForm({ params, onParamChange }) {
+  return <div>Hello World</div>;
 }
