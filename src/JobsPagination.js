@@ -5,7 +5,7 @@ export default function JobsPagination({ page, setPage, hasNextPage, loading }) 
   function adjustPage(amount) {
     setPage((prevPage) => prevPage + amount);
   }
-  console.log(loading);
+
   return (
     <div>
       {!loading && (
