@@ -3,7 +3,11 @@ This project allows users to search for jobs using the github jobs API
 
 <img src="github_jobs.gif">
 
-# Getting Started with Create React App
+## Tech Used 
+react.js
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
